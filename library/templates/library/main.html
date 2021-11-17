@@ -1,0 +1,24 @@
+{% extends 'library/base.html' %}  
+{% load static %}
+<!DOCTYPE html>
+<head>
+<title> {% block title %} Home Page {% endblock %}</title>
+{% block stylesheet %}
+<link href="{% static 'css/main.css' %}" rel="stylesheet" />
+
+{% endblock %}
+
+</head> 
+<body>
+{% block body %}
+<center><h1><i>Treasure Library Management System</i></h1>
+<div>
+			<img class="book" src="/media/books.jpg" alt="book" ></img>
+</div>
+</center>
+{% endblock %}
+
+
+
+</body>
+</html>

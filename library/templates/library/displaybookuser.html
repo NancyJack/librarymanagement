@@ -1,0 +1,59 @@
+{% extends 'library/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %} Display All Books {% endblock %}</title>
+   
+
+</head> 
+<body>
+{% block body %}
+    
+<div class="container col">
+<table class="table table-hover ">
+    
+    <tr>
+        
+        <th> Book Name </th>
+        <th> Author Name </th>
+        <th> ISBN </th>
+        <th> Edition </th>
+        <th> Publication Name </th>
+        <th> Book Code </th>
+        <th> Book Genres </th>
+
+
+     
+        
+    </tr>
+
+    {% for display in displaybook %}
+    <tr>
+        
+        <td> {{ display.name }} </td> 
+        <td> {{ display.author }} </td>
+        <td> {{ display.isbn }} </td> 
+        <td> {{ display.edition }} </td> 
+        <td> {{ display.pub }} </td> 
+        <td> {{ display.code }} </td>
+        <td> {{ display.genres }} </td> 
+        
+              
+    </tr>
+
+    {% endfor %}
+</table>
+        
+</div>
+
+{% endblock %}
+
+</body>
+</html>
+
+
+
+
